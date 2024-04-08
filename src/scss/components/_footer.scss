@@ -1,0 +1,18 @@
+.footer {
+  padding: 30px 0;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

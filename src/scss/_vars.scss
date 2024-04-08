@@ -2,11 +2,14 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans";
-  --content-width: 1170px;
+  --font-family: "SilkScreen";
+  --second-family: "Roboto";
+  --content-width: 1200px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
+  --dark-color: #212121;
+  --yellow-color: #e6db74;
 }

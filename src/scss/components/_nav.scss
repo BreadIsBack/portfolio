@@ -1,0 +1,49 @@
+.nav {
+
+  @include small-tablet {
+    position: fixed;
+    display: block;
+    padding: 30px;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: 900;
+    background-color: var(--dark-color);
+    transform: translateX(-150%);
+    transition: transform 0.3s ease-in-out;
+
+    &--active {
+      transform: none;
+    }
+  }
+
+  @include mobile {
+    width: 75%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__link {
+    color: var(--yellow-color);
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    text-wrap: nowrap;
+
+    &:hover {
+      color: #9a99ff;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}
