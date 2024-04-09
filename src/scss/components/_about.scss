@@ -1,0 +1,45 @@
+.about {
+  margin-bottom: 50px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-box {
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid grey;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__inner-text {
+    padding: 25px;
+    width: 50%;
+    margin: 0;
+    flex-grow: 1;
+
+    @include small-tablet {
+      width: 100%;
+    }
+
+    &--heading {
+      font-size: 20px;
+      color: var(--light-color);
+      border-right: 1px solid grey;
+
+      @include small-tablet {
+        border-right: 0;
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+}

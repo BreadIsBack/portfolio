@@ -13,7 +13,6 @@ html {
   font-family: var(--font-family, monospace);
   -webkit-text-size-adjust: 100%;
   // background-color: #292929;
-  // background-color: #9a99ff;
 }
 
 .page__body {
@@ -24,6 +23,10 @@ html {
   font-weight: 400;
   color: var(--yellow-color);
   background-color: var(--dark-color);
+
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 img {
@@ -57,8 +60,20 @@ a {
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
   min-height: 100%;
+  // position: relative;
   display: flex;
   flex-direction: column;
+
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   width: 1px;
+  //   top: 0;
+  //   left: 50px;
+  //   bottom: 0;
+  //   background-color: grey;
+  //   z-index: 10;
+  // }
 }
 
 .main {
@@ -134,4 +149,57 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  color: var(--light-color);
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
+.bg-attach {
+  padding-bottom: 300px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 150px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../img/hero-bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 150px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #9a99ff;
+    opacity: 0.5;
+  }
+
+  &--services {
+    &::before {
+      top: 75%;
+      bottom: 10px;
+    }
+
+    &::after {
+      top: 75%;
+      bottom: 10px;
+    }
+  }
 }

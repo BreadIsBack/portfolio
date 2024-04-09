@@ -1,7 +1,45 @@
 .hero {
+  margin-bottom: 50px;
+  // position: relative;
+
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   top: 150px;
+  //   right: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   background-image: url('../img/hero-bg-2.jpg');
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: 50% 50%;
+  //   background-attachment: fixed;
+  // }
+
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   top: 150px;
+  //   right: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   background-color: #9a99ff;
+  //   opacity: 0.5;
+  // }
+
   &__text {
     margin: 0;
     text-align: center;
     color: var(--light-color);
+  }
+
+  &__print {
+    margin: 0;
+    font-size: 40px;
+    color: var(--yellow-color);
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }

@@ -1,1 +1,2 @@
-console.log('components');
+import './components/text'
+import './components/smoothscroll'

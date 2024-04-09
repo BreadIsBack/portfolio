@@ -1,0 +1,21 @@
+.text-box {
+  text-align: center;
+
+  &__code-bracket {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--blue-color);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__code {
+    color: var(--blue-color);
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

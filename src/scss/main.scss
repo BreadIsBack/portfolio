@@ -7,8 +7,13 @@
 // подключения больщих компонентов страницы
 @import "./components/header";
 @import "./components/hero";
+@import "./components/about";
+@import "./components/portfolio";
+@import "./components/services";
+@import "./components/contacts";
 @import "./components/footer";
 
 // подключения маленьких компонентов страницы
 @import "./components/nav";
 @import "./components/burger";
+@import "./components/text-box";
