@@ -39,12 +39,36 @@
           transition: opacity 0.3s ease-in-out;
         }
       }
+
+      .portfolio__img-wrapper {
+        &::before {
+          opacity: 0;
+          transform: rotate(-90deg);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+      }
     }
   }
 
   &__img-wrapper {
     margin-bottom: 10px;
     position: relative;
+
+    &::before {
+      position: absolute;
+      border-radius: 50px;
+      content: '';
+      width: 150px;
+      height: 150px;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url('../img/portfolio/figma-2.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
 
     &::after {
       position: absolute;
@@ -54,14 +78,14 @@
       right: 0;
       left: 0;
       bottom: 0;
-      // background-color: var(--dark-color);
       background-color: var(--light-blue);
-      opacity: 0.6;
+      opacity: 0.9;
       transition: opacity 0.3s ease-in-out;
     }
   }
 
   &__img {
+    display: block;
     border-radius: 50px;
     width: 100%;
     min-height: 100%;

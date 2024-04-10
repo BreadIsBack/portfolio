@@ -35,11 +35,36 @@
       font-size: 20px;
       color: var(--light-color);
       border-right: 1px solid grey;
+      text-decoration: underline;
 
       @include small-tablet {
         border-right: 0;
         border-bottom: 1px solid grey;
       }
+    }
+  }
+
+  &__skills-list {
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 30px;
+    border: 1px solid grey;
+
+    @include mobile {
+      gap: 15px;
+    }
+  }
+
+  &__skills-img {
+    width: 50px;
+    height: 50px;
+
+    @include mobile {
+      width: 30px;
+      height: 30px;
     }
   }
 }
